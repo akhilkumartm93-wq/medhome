@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medhome Medicals | Your Trusted Medical Store in Marangattupilly</title>
+    <meta name="description" content="Medhome Medicals - Genuine medicines, best discounts, and free home delivery in Marangattupilly, Kerala. Call 9645004442.">
+    <link rel="icon" href="Horizontal-Purple.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+
+    <!-- ECG Heartbeat Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-ecg">
+            <svg viewBox="0 0 200 80">
+                <polyline class="ecg-line"
+                    points="0,40 30,40 35,40 40,35 45,40 60,40 65,40 70,20 75,60 80,10 85,70 90,30 95,40 110,40 115,35 120,42 125,38 130,40 160,40 165,40 170,35 175,40 200,40" />
+                <circle class="ecg-glow-dot" cx="0" cy="40" r="3">
+                    <animate attributeName="cx" values="0;200" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="cy" values="40;40;40;35;40;40;40;20;60;10;70;30;40;40;35;42;38;40;40;40;35;40;40" dur="1.8s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="Horizontal-White.png" alt="Medhome Medicals" class="logo-light">
+                <img src="Horizontal-Purple.png" alt="Medhome Medicals" class="logo-dark">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="tel:+919645004442" class="nav-cta" data-magnetic><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+            <div class="nav-burger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-menu-btns">
+            <a href="tel:+919645004442" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/919645004442" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <!-- Decorative ECG background -->
+        <div class="hero-ecg-bg">
+            <svg viewBox="0 0 1400 60" preserveAspectRatio="none">
+                <polyline class="ecg-line" points="0,30 100,30 120,25 140,30 200,30 220,10 240,50 260,5 280,55 300,20 320,30 400,30 420,25 440,32 460,28 480,30 600,30 620,25 640,30 700,30 720,30 740,25 760,30 820,30 840,10 860,50 880,5 900,55 920,20 940,30 1020,30 1040,25 1060,32 1080,28 1100,30 1200,30 1220,25 1240,30 1400,30" />
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag" data-reveal="up">
+                    <span class="pulse-dot"></span>
+                    Trusted Pharmacy in Marangattupilly
+                </div>
+                <h1 data-text-split>Your Health, Our <span class="text-glow">Priority</span></h1>
+                <p class="hero-sub" data-reveal="up" data-reveal-delay="2">
+                    Get genuine medicines with the best discounts and free home delivery. Medhome Medicals — your neighbourhood pharmacy you can always trust.
+                </p>
+                <div class="hero-btns" data-reveal="up" data-reveal-delay="3">
+                    <a href="services.html" class="btn btn-primary" data-magnetic><i class="fas fa-capsules"></i> Our Services</a>
+                    <a href="https://wa.me/919645004442?text=Hi%20Medhome%20Medicals%2C%20I%20would%20like%20to%20order%20medicines." target="_blank" class="btn btn-whatsapp" data-magnetic><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+                </div>
+                <div class="hero-stats" data-reveal="up" data-reveal-delay="4">
+                    <div class="hero-stat">
+                        <strong data-counter data-target="5000" data-suffix="+">0</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>100%</strong>
+                        <span>Genuine Products</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>Free</strong>
+                        <span>Home Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee-section">
+        <div class="marquee-inner-wrap">
+            <div class="marquee-row">
+                <div class="marquee-track">
+                    <span class="marquee-item"><i class="fas fa-pills"></i> Genuine Medicines</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-truck-fast"></i> Free Home Delivery</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-tags"></i> Best Discounts</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-user-nurse"></i> Expert Pharmacists</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-shield-halved"></i> Licensed Pharmacy</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-prescription-bottle-medical"></i> Prescription Services</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-pills"></i> Genuine Medicines</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-truck-fast"></i> Free Home Delivery</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-tags"></i> Best Discounts</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-user-nurse"></i> Expert Pharmacists</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-shield-halved"></i> Licensed Pharmacy</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-prescription-bottle-medical"></i> Prescription Services</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                </div>
+            </div>
+            <div class="marquee-row reverse" style="margin-top: 6px;">
+                <div class="marquee-track">
+                    <span class="marquee-item"><i class="fas fa-baby"></i> Baby Care Products</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-kit-medical"></i> Surgical Items</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-percent"></i> Flat Discounts</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-stethoscope"></i> Medical Devices</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-leaf"></i> Ayurvedic & Herbal</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-pump-soap"></i> Personal Care</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-baby"></i> Baby Care Products</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-kit-medical"></i> Surgical Items</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-percent"></i> Flat Discounts</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-stethoscope"></i> Medical Devices</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-leaf"></i> Ayurvedic & Herbal</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                    <span class="marquee-item"><i class="fas fa-pump-soap"></i> Personal Care</span>
+                    <span class="marquee-sep"><i class="fas fa-diamond"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== WHY CHOOSE US — BENTO GRID ===== -->
+    <section class="section" style="background: var(--dark-50);">
+        <div class="container">
+            <div class="sec-head center">
+                <div class="sec-overline" data-reveal="up">Why Choose Us</div>
+                <h2 class="sec-title" data-reveal="up" data-reveal-delay="1">Why <em>Medhome</em> Medicals?</h2>
+                <p class="sec-desc" data-reveal="up" data-reveal-delay="2">We go beyond selling medicines. We care about your health and your wallet.</p>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-card featured" data-reveal="up" data-reveal-delay="1" data-tilt>
+                    <div class="bento-ic"><i class="fas fa-tags"></i></div>
+                    <h3>Best Discounts in Town</h3>
+                    <p>Flat discounts on all branded and generic medicines. Save significantly on every purchase with our unbeatable prices.</p>
+                </div>
+                <div class="bento-card" data-reveal="up" data-reveal-delay="2" data-tilt>
+                    <div class="bento-ic"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Free Home Delivery</h3>
+                    <p>Get medicines delivered right to your doorstep at zero extra cost.</p>
+                </div>
+                <div class="bento-card dark" data-reveal="up" data-reveal-delay="3" data-tilt>
+                    <div class="bento-ic"><i class="fas fa-shield-halved"></i></div>
+                    <h3>100% Genuine Medicines</h3>
+                    <p>Only authentic medicines from licensed manufacturers. Your health and safety always come first. Every product is verified.</p>
+                </div>
+                <div class="bento-card" data-reveal="up" data-reveal-delay="4" data-tilt>
+                    <div class="bento-ic"><i class="fas fa-user-nurse"></i></div>
+                    <h3>Expert Pharmacists</h3>
+                    <p>Qualified pharmacists to guide you with prescriptions and health queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT PREVIEW ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="about-split">
+                <div class="about-visual" data-reveal="left">
+                    <div class="about-visual-inner">
+                        <img src="Horizontal-White.png" alt="Medhome Medicals">
+                    </div>
+                    <div class="about-badge">
+                        <strong>5+</strong>
+                        <span>Years Trusted</span>
+                    </div>
+                </div>
+                <div data-reveal="right">
+                    <div class="sec-overline">About Us</div>
+                    <h2 class="sec-title">Your Complete Healthcare <em>Destination</em></h2>
+                    <div class="about-text">
+                        <p>Medhome Medicals is a trusted pharmacy in Marangattupilly, Kerala, committed to providing quality healthcare products at affordable prices.</p>
+                        <p>From prescription medicines to healthcare essentials, we stock a wide range of products. Our experienced pharmacists ensure you get the right guidance every time.</p>
+                    </div>
+                    <div class="check-grid">
+                        <div class="check-item"><i class="fas fa-check"></i> Genuine Medicines</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Licensed Pharmacy</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Expert Pharmacists</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Affordable Prices</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Home Delivery</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Wide Product Range</div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline-dark" data-magnetic><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES PREVIEW ===== -->
+    <section class="section" style="background: var(--dark-50);">
+        <div class="container">
+            <div class="sec-head center">
+                <div class="sec-overline" data-reveal="up">Our Services</div>
+                <h2 class="sec-title" data-reveal="up" data-reveal-delay="1">What We <em>Offer</em></h2>
+                <p class="sec-desc" data-reveal="up" data-reveal-delay="2">Comprehensive healthcare products and services for you and your family.</p>
+            </div>
+            <div class="srv-grid">
+                <div class="srv-card" data-reveal="up" data-reveal-delay="1" data-tilt>
+                    <div class="srv-ic"><i class="fas fa-prescription-bottle-medical"></i></div>
+                    <h3>Prescription Medicines</h3>
+                    <p>All prescribed medications verified by our licensed pharmacists.</p>
+                </div>
+                <div class="srv-card" data-reveal="up" data-reveal-delay="2" data-tilt>
+                    <div class="srv-ic"><i class="fas fa-capsules"></i></div>
+                    <h3>OTC & Generic</h3>
+                    <p>Affordable over-the-counter and generic medicines for daily health needs.</p>
+                </div>
+                <div class="srv-card" data-reveal="up" data-reveal-delay="3" data-tilt>
+                    <div class="srv-ic"><i class="fas fa-truck-medical"></i></div>
+                    <h3>Home Delivery</h3>
+                    <p>Free doorstep delivery. Send your prescription via WhatsApp to order.</p>
+                </div>
+                <div class="srv-card" data-reveal="up" data-reveal-delay="4" data-tilt>
+                    <div class="srv-ic"><i class="fas fa-percent"></i></div>
+                    <h3>Discount Programs</h3>
+                    <p>Flat discounts on branded medicines with special rates for regulars.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:48px;" data-reveal="up" data-reveal-delay="5">
+                <a href="services.html" class="btn btn-outline-dark" data-magnetic><i class="fas fa-arrow-right"></i> View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS RIBBON ===== -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-item" data-reveal="up" data-reveal-delay="1">
+                    <strong data-counter data-target="5000" data-suffix="+">0</strong>
+                    <span>Customers Served</span>
+                </div>
+                <div class="stat-item" data-reveal="up" data-reveal-delay="2">
+                    <strong data-counter data-target="1000" data-suffix="+">0</strong>
+                    <span>Products Available</span>
+                </div>
+                <div class="stat-item" data-reveal="up" data-reveal-delay="3">
+                    <strong data-counter data-target="100" data-suffix="%">0</strong>
+                    <span>Genuine Products</span>
+                </div>
+                <div class="stat-item" data-reveal="up" data-reveal-delay="4">
+                    <strong>FREE</strong>
+                    <span>Home Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="sec-head center">
+                <div class="sec-overline" data-reveal="up">Testimonials</div>
+                <h2 class="sec-title" data-reveal="up" data-reveal-delay="1">What Our Customers <em>Say</em></h2>
+                <p class="sec-desc" data-reveal="up" data-reveal-delay="2">Trusted by thousands of families in Marangattupilly and surrounding areas.</p>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card" data-reveal="up" data-reveal-delay="1">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Medhome Medicals is our go-to pharmacy. They always have what we need and the discounts are really great. The home delivery is a lifesaver!"</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar">A</div>
+                        <div><strong>Arun Kumar</strong><span>Regular Customer</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-reveal="up" data-reveal-delay="2">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Very reliable and trustworthy. The pharmacist is very helpful and explains everything about the medicines properly. Highly recommended!"</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar">S</div>
+                        <div><strong>Sheela Thomas</strong><span>Regular Customer</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-reveal="up" data-reveal-delay="3">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+                    <blockquote>"I sent my prescription on WhatsApp and the medicines were at my door within hours. Amazing service and great prices too!"</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar">R</div>
+                        <div><strong>Rajesh Menon</strong><span>Regular Customer</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BLOCK ===== -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-inner" data-reveal="up">
+                <h2>Need Medicines? We Deliver to Your Doorstep!</h2>
+                <p>Call us or send your prescription via WhatsApp for quick home delivery with the best discounts.</p>
+                <div class="cta-btns">
+                    <a href="tel:+919645004442" class="btn btn-white" data-magnetic><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919645004442?text=Hi%20Medhome%20Medicals%2C%20I%20would%20like%20to%20order%20medicines." target="_blank" class="btn btn-whatsapp" data-magnetic><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.5!2d76.61275701933921!3d9.74226419507029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNDQnMzIuMiJOIDc2wrAzNic0NS45IkU!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Horizontal-White.png" alt="Medhome Medicals">
+                    <p>Your trusted medical store in Marangattupilly, Kerala. Genuine medicines, best discounts, and free home delivery.</p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/919645004442" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+919645004442" aria-label="Call"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.google.com/maps?q=9.74226419507029,76.61275701933921" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Kattikkanal Building, near Labour India Complex, Marangattupilly, Kerala 686635</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919645004442">+91 9645004442</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919645004442" target="_blank">WhatsApp Us</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 7AM-9:30PM | Sun: 8AM-1PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medhome Medicals. All Rights Reserved.</p>
+                <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-wrap">
+        <a href="https://wa.me/919645004442?text=Hi%20Medhome%20Medicals%2C%20I%20would%20like%20to%20enquire%20about%20medicines." class="fab fab-wa" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919645004442" class="fab fab-call" aria-label="Call">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
