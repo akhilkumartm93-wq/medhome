@@ -29,13 +29,18 @@
     // ========== MOBILE MENU ==========
     const burger = document.querySelector('.nav-burger');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileClose = document.querySelector('.mobile-menu-close');
     if (burger && mobileMenu) {
         const toggleMenu = () => {
             burger.classList.toggle('open');
             mobileMenu.classList.toggle('open');
+            if (mobileOverlay) mobileOverlay.classList.toggle('open');
             document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
         };
         burger.addEventListener('click', toggleMenu);
+        if (mobileClose) mobileClose.addEventListener('click', toggleMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMenu);
         mobileMenu.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('open')) toggleMenu();
@@ -59,17 +64,20 @@
     // ========== TEXT SPLIT ANIMATION (Hero headlines) ==========
     const splitElements = document.querySelectorAll('[data-text-split]');
     splitElements.forEach(el => {
-        const text = el.innerHTML;
-        // Split by words, preserving HTML tags
-        const words = text.split(/(\s+)/);
-        el.innerHTML = words.map(word => {
-            if (word.trim() === '') return word;
-            // Check if it contains HTML tags
-            if (word.includes('<')) return word.replace(/>([^<]+)</g, (match, content) => {
-                return '>' + content.split(/\s+/).map(w => `<span class="word">${w}</span>`).join(' ') + '<';
-            });
-            return `<span class="word">${word}</span>`;
-        }).join('');
+        const html = el.innerHTML;
+        // Split into text nodes and HTML tags, preserving tags intact
+        const parts = html.split(/(<[^>]+>)/);
+        let result = '';
+        parts.forEach(part => {
+            if (part.startsWith('<')) {
+                // HTML tag — keep as-is
+                result += part;
+            } else {
+                // Text node — wrap each word
+                result += part.replace(/(\S+)/g, '<span class="word">$1</span>');
+            }
+        });
+        el.innerHTML = result;
 
         // Trigger animation on intersection
         const observer = new IntersectionObserver((entries) => {
@@ -188,6 +196,59 @@
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    // ========== TESTIMONIAL CAROUSEL (Mobile) ==========
+    const testiGrid = document.querySelector('.testi-grid');
+    if (testiGrid) {
+        const cards = testiGrid.querySelectorAll('.testi-card');
+        if (cards.length > 1) {
+            const dotsWrap = document.createElement('div');
+            dotsWrap.className = 'testi-carousel-dots';
+            cards.forEach((_, i) => {
+                const dot = document.createElement('span');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+                dotsWrap.appendChild(dot);
+            });
+            testiGrid.after(dotsWrap);
+
+            let current = 0;
+            let autoTimer = null;
+            const isMobile = () => window.innerWidth <= 768;
+
+            function goTo(idx) {
+                cards.forEach(c => c.classList.remove('carousel-active'));
+                dotsWrap.querySelectorAll('span').forEach(d => d.classList.remove('active'));
+                current = idx;
+                cards[current].classList.add('carousel-active');
+                dotsWrap.children[current].classList.add('active');
+            }
+
+            function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => { if (isMobile()) goTo((current + 1) % cards.length); }, 4000); }
+
+            function initCarousel() {
+                if (isMobile()) {
+                    goTo(current);
+                    resetAuto();
+                } else {
+                    clearInterval(autoTimer);
+                    cards.forEach(c => c.classList.remove('carousel-active'));
+                }
+            }
+
+            initCarousel();
+            let resizeTimer;
+            window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(initCarousel, 200); });
+
+            // Swipe
+            let tx = 0;
+            testiGrid.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+            testiGrid.addEventListener('touchend', e => {
+                const d = tx - e.changedTouches[0].clientX;
+                if (Math.abs(d) > 50) { goTo(d > 0 ? (current + 1) % cards.length : (current - 1 + cards.length) % cards.length); resetAuto(); }
+            }, { passive: true });
+        }
     }
 
     // ========== CONTACT FORM HANDLER ==========
